@@ -1,51 +1,189 @@
-import { useState } from "react";
-import { Bot, Send, Sparkles, User } from "lucide-react";
+﻿import { FormEvent, useEffect, useState } from "react";
+import { askARCTES } from "../../services/ai";
+
+type Message = {
+  role: "user" | "assistant";
+  content: string;
+};
+
+const KEY = "arctes-chat-history";
 
 export default function Chat() {
-  const [input, setInput] = useState("");
-  const [messages, setMessages] = useState([
-    { id: 1, role: "arctes", text: "I’m ARCTES. Connect your private chat endpoint here for live model responses. No API secret belongs in the frontend." },
-  ]);
+  const [messages, setMessages] = useState<Message[]>(() => {
+    try {
+      const saved = localStorage.getItem(KEY);
+      return saved
+        ? JSON.parse(saved)
+        : [{
+            role: "assistant",
+            content: "ARCTES online. How can I help you?"
+          }];
+    } catch {
+      return [{
+        role: "assistant",
+        content: "ARCTES online. How can I help you?"
+      }];
+    }
+  });
 
-  function send() {
-    const value = input.trim();
-    if (!value) return;
-    setMessages((m) => [...m,
-      { id: Date.now(), role: "user", text: value },
-      { id: Date.now() + 1, role: "arctes", text: "Message received. The autonomous feed API is connected; the private chat model endpoint can be wired next." },
-    ]);
+  const [input, setInput] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    localStorage.setItem(KEY, JSON.stringify(messages));
+  }, [messages]);
+
+  async function sendMessage(e: FormEvent) {
+    e.preventDefault();
+
+    const text = input.trim();
+    if (!text || loading) return;
+
+    const userMessage: Message = {
+      role: "user",
+      content: text
+    };
+
+    const history = [...messages, userMessage];
+
+    setMessages(history);
     setInput("");
+    setLoading(true);
+
+    try {
+      const answer = await askARCTES(text, messages.slice(-10));
+
+      setMessages([
+        ...history,
+        {
+          role: "assistant",
+          content: answer
+        }
+      ]);
+    } catch (error) {
+      setMessages([
+        ...history,
+        {
+          role: "assistant",
+          content:
+            error instanceof Error
+              ? `ARCTES ERROR: ${error.message}`
+              : "Unable to connect to ARCTES."
+        }
+      ]);
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  function newChat() {
+    const welcome: Message = {
+      role: "assistant",
+      content: "New ARCTES session initialized."
+    };
+
+    setMessages([welcome]);
+    localStorage.removeItem(KEY);
   }
 
   return (
-    <main className="min-h-screen bg-[#010208] px-4 pb-10 pt-28 text-white">
-      <div className="mx-auto flex h-[calc(100vh-9rem)] max-w-6xl flex-col overflow-hidden rounded-3xl border border-white/[.07] bg-white/[.02]">
-        <header className="flex items-center justify-between border-b border-white/[.07] px-5 py-4">
-          <div className="flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-cyan-300/20 bg-cyan-300/[.05]"><Bot size={18} className="text-cyan-300" /></div>
-            <div><div className="font-bold">ARCTES</div><div className="font-mono text-[7px] tracking-[.2em] text-emerald-300/60">AUTONOMOUS INTELLIGENCE</div></div>
-          </div>
-          <Sparkles size={16} className="text-cyan-300/50" />
-        </header>
+    <div className="min-h-screen bg-[#02040a] text-white flex flex-col">
 
-        <section className="flex-1 space-y-5 overflow-y-auto p-5 sm:p-8">
-          {messages.map((m) => (
-            <div key={m.id} className={`flex gap-3 ${m.role === "user" ? "justify-end" : ""}`}>
-              {m.role === "arctes" && <div className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-cyan-300/10"><Bot size={14} className="text-cyan-300" /></div>}
-              <div className={`max-w-2xl rounded-2xl px-4 py-3 text-sm leading-7 ${m.role === "user" ? "bg-cyan-300 text-black" : "border border-white/[.07] bg-white/[.025] text-white/60"}`}>{m.text}</div>
-              {m.role === "user" && <div className="mt-1 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white/[.06]"><User size={14} className="text-white/50" /></div>}
+      <header className="h-16 border-b border-white/10 bg-black/60 backdrop-blur-xl flex items-center justify-between px-6">
+        <div className="flex items-center gap-3">
+          <div className="h-10 w-10 rounded-xl bg-gradient-to-br from-cyan-400 to-blue-600 flex items-center justify-center font-black">
+            A
+          </div>
+
+          <div>
+            <div className="font-bold tracking-wider">
+              ARCTES
+            </div>
+            <div className="text-[9px] tracking-[0.3em] text-cyan-300">
+              AUTONOMOUS INTELLIGENCE
+            </div>
+          </div>
+        </div>
+
+        <div className="flex items-center gap-4">
+          <div className="hidden sm:flex items-center gap-2 text-xs text-emerald-400">
+            <span className="h-2 w-2 rounded-full bg-emerald-400 animate-pulse" />
+            ONLINE
+          </div>
+
+          <button
+            onClick={newChat}
+            className="rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-xs hover:bg-white/10"
+          >
+            New Chat
+          </button>
+        </div>
+      </header>
+
+      <main className="flex-1 w-full max-w-5xl mx-auto px-4 py-8 overflow-y-auto">
+
+        <div className="space-y-5">
+          {messages.map((message, index) => (
+            <div
+              key={index}
+              className={
+                message.role === "user"
+                  ? "flex justify-end"
+                  : "flex justify-start"
+              }
+            >
+              <div
+                className={
+                  message.role === "user"
+                    ? "max-w-[85%] rounded-2xl border border-blue-400/20 bg-blue-500/10 px-5 py-4"
+                    : "max-w-[85%] rounded-2xl border border-cyan-400/10 bg-white/[0.035] px-5 py-4"
+                }
+              >
+                <div className="mb-2 text-[10px] uppercase tracking-[0.25em] text-cyan-300">
+                  {message.role === "user" ? "YOU" : "ARCTES"}
+                </div>
+
+                <div className="whitespace-pre-wrap text-sm leading-7 text-white/85">
+                  {message.content}
+                </div>
+              </div>
             </div>
           ))}
-        </section>
 
-        <footer className="border-t border-white/[.07] p-4">
-          <div className="flex items-center gap-2 rounded-2xl border border-white/[.08] bg-black/20 p-2">
-            <input value={input} onChange={(e) => setInput(e.target.value)} onKeyDown={(e) => e.key === "Enter" && send()}
-              placeholder="Talk to ARCTES..." className="min-w-0 flex-1 bg-transparent px-3 py-3 text-sm text-white outline-none placeholder:text-white/20" />
-            <button onClick={send} className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-cyan-300 text-black"><Send size={16} /></button>
-          </div>
-        </footer>
-      </div>
-    </main>
+          {loading && (
+            <div className="flex justify-start">
+              <div className="rounded-2xl border border-cyan-400/10 bg-white/[0.035] px-5 py-4 text-sm text-cyan-300">
+                ARCTES is thinking...
+              </div>
+            </div>
+          )}
+        </div>
+
+      </main>
+
+      <footer className="border-t border-white/10 bg-black/70 p-4 backdrop-blur-xl">
+        <form
+          onSubmit={sendMessage}
+          className="mx-auto flex max-w-5xl gap-3"
+        >
+          <input
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+            disabled={loading}
+            placeholder="Ask ARCTES anything..."
+            className="flex-1 rounded-xl border border-white/10 bg-white/5 px-5 py-4 text-sm outline-none placeholder:text-white/30 focus:border-cyan-400/40"
+          />
+
+          <button
+            type="submit"
+            disabled={loading || !input.trim()}
+            className="rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-6 font-semibold disabled:opacity-40"
+          >
+            Send
+          </button>
+        </form>
+      </footer>
+
+    </div>
   );
 }
