@@ -34,6 +34,39 @@ agents and external data sources.
 
 ---
 
+# 📋 Quick Navigation
+
+| Section                                                            | Description                                  |
+| ------------------------------------------------------------------ | -------------------------------------------- |
+| [🚀 About APS Minds](#-about-aps-minds)                            | Project overview and core vision             |
+| [🎯 Problem We Solve](#-problem-we-solve)                          | Problem statement and proposed solution      |
+| [🧠 The Five AI Integrations](#-the-five-ai-integrations)          | Overview of the five AI-powered integrations |
+| [🔄 How Arctes AI Works](#-how-arctes-ai-works)                    | Multi-agent workflow and request lifecycle   |
+| [✨ Features](#-features)                                          | Key platform features and capabilities       |
+| [🏗️ Architecture](#-architecture)                                  | Overall system architecture                  |
+| [🎨 Frontend](#-frontend)                                          | Frontend technologies and structure          |
+| [⚙️ Backend](#️-backend)                                            | Backend architecture and responsibilities    |
+| [🧠 Agent Architecture](#-agent-architecture)                      | Specialized agent architecture               |
+| [🗄️ Database](#-database)                                          | Database and migration architecture          |
+| [☁️ Infrastructure](#️-infrastructure)                              | Deployment and infrastructure components     |
+| [📁 Project Structure](#-project-structure)                        | Complete repository structure                |
+| [🧩 Project Structure Explained](#-project-structure-explained)    | Explanation of important directories         |
+| [🔌 Frontend ↔ Backend](#-frontend--backend-communication)         | API communication architecture               |
+| [🔒 Security](#-security)                                          | Authentication and security practices        |
+| [🔑 Environment Variables](#-environment-variables)                | API keys and configuration                   |
+| [📡 Mock APIs & Data Sources](#-mock-apis--data-sources)           | Development and testing data sources         |
+| [⏱️ APScheduler](#️-apscheduler)                                    | Background jobs and automation               |
+| [🛠️ Installation & Setup](#️-installation--setup)                   | Local development setup                      |
+| [🔄 Complete Request Lifecycle](#-complete-request-lifecycle)      | End-to-end request flow                      |
+| [💡 Example Multi-Agent Request](#-example-multi-agent-request)    | Example of agent collaboration               |
+| [📊 Why Multi-Agent Architecture?](#-why-multi-agent-architecture) | Benefits of the multi-agent approach         |
+| [🧰 Tech Stack](#-tech-stack)                                      | Technologies and tools used                  |
+| [🗺️ Roadmap](#️-roadmap)                                            | Current and planned development              |
+| [👥 Team](#-team)                                                  | APS Minds hackathon team                     |
+| [🏆 Vision](#-vision)                                              | Long-term vision of Arctes AI                |
+
+---
+
 # 🚀 About APS Minds
 
 **APS Minds** is an AI-powered intelligence platform built around **Arctes AI**, a multi-agent architecture designed to handle different categories of tasks using specialized AI capabilities.
