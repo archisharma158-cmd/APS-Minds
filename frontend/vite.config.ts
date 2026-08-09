@@ -7,7 +7,7 @@ export default defineConfig({
     port: 5173,
     proxy: {
       "/api": {
-        target: "http://localhost:8001",
+        target: "https://aps-minds.onrender.com",
         changeOrigin: true,
       },
     },
