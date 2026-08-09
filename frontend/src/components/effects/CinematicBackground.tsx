@@ -34,10 +34,14 @@ export default function CinematicBackground() {
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     };
 
-    resize();
+resize();
+
+    // Reduce particle count on small screens for better mobile performance.
+    const isMobile = window.innerWidth < 640;
+    const particleCount = isMobile ? 40 : 100;
 
     const particles: Particle[] = Array.from(
-      { length: 100 },
+      { length: particleCount },
       () => ({
         x: Math.random() * window.innerWidth,
         y: Math.random() * window.innerHeight,

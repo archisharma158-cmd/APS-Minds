@@ -28,6 +28,11 @@ class Settings(BaseSettings):
     # ARCTES — Editor thresholds
     EDITOR_MIN_SCORE: float = 0.6
 
+    # ARCTES — OpenRouter / Chat
+    OPENROUTER_API_KEY: str = ""
+    OPENROUTER_BASE_URL: str = "https://openrouter.ai/api/v1"
+    ARCTES_MODEL: str = "openai/gpt-5-nano"
+
     model_config = {"env_file": str(BASE_DIR / ".env"), "extra": "ignore"}
 
     @property

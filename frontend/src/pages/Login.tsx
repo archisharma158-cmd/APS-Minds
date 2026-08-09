@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { useAuth } from "../context/AuthContext";
 import type { ApiError } from "../types";
 import { AxiosError } from "axios";
+import logo from "../assets/apsminds-logo.jpg";
 
 export default function Login() {
   const { login } = useAuth();
@@ -50,10 +51,22 @@ export default function Login() {
         <div className="glass-strong p-8 sm:p-10">
           {/* Header */}
           <div className="text-center mb-8">
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-brand-500 to-purple-500 flex items-center justify-center mx-auto mb-4 shadow-lg shadow-brand-500/30">
-              <span className="text-white font-bold text-lg">A</span>
+            <div className="relative mx-auto mb-4 h-16 w-16 overflow-hidden rounded-2xl border border-cyan-300/20 bg-black shadow-[0_0_30px_rgba(34,211,238,0.15)] sm:h-20 sm:w-20">
+              <img
+                src={logo}
+                alt="APS Minds"
+                className="h-full w-full object-cover"
+              />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-cyan-300/10 via-transparent to-blue-600/10" />
+              <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-inset ring-white/10" />
             </div>
-            <h1 className="text-2xl font-bold text-white">Welcome back</h1>
+            <h1 className="text-2xl font-black tracking-[-0.04em] text-white">
+              APS<span className="text-cyan-300">MINDS</span>
+            </h1>
+            <p className="mt-1 font-mono text-[9px] tracking-[0.28em] text-white/30">
+              AUTONOMOUS INTELLIGENCE
+            </p>
+            <h2 className="mt-5 text-xl font-bold text-white">Welcome back</h2>
             <p className="text-white/40 text-sm mt-1">Sign in to APS Minds</p>
           </div>
 

@@ -9,11 +9,32 @@
     box-sizing: border-box;
   }
 
+html {
+    overflow-x: hidden;
+  }
+
   body {
     font-family: "Inter", system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
+  }
+
+  /* Ensure long text/URLs/code wrap inside chat bubbles and cards. */
+  .text-wrap-anywhere {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  /* Minimum 44x44px touch target for mobile controls. */
+  .touch-target {
+    min-width: 44px;
+    min-height: 44px;
+  }
+
+  /* Safe-area bottom padding for iOS home indicator. */
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
   }
 
   ::-webkit-scrollbar {
@@ -31,6 +52,79 @@
 
   ::-webkit-scrollbar-thumb:hover {
     background: rgba(99, 102, 241, 0.6);
+  }
+}
+
+@layer utilities {
+  /* --- ARCTES planet / orbit indicator --- */
+  .arctes-orbit-ring {
+    animation: arctes-orbit-spin 6s linear infinite;
+  }
+
+  .arctes-orbit-dot {
+    animation: arctes-orbit-spin 6s linear infinite;
+  }
+
+  .arctes-planet-glow {
+    filter: drop-shadow(0 0 12px rgba(34, 211, 238, 0.55));
+  }
+
+  .arctes-analyzing-dots::after {
+    content: "";
+    animation: arctes-dots 1.4s steps(4, end) infinite;
+  }
+
+  .arctes-typing-caret::after {
+    content: "▌";
+    margin-left: 2px;
+    color: rgba(34, 211, 238, 0.9);
+    animation: arctes-caret-blink 1s step-end infinite;
+  }
+}
+
+@keyframes arctes-orbit-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes arctes-orbit-spin-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes arctes-dots {
+  0% {
+    content: "";
+  }
+  25% {
+    content: ".";
+  }
+  50% {
+    content: "..";
+  }
+  75% {
+    content: "...";
+  }
+  100% {
+    content: "";
+  }
+}
+
+@keyframes arctes-caret-blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
   }
 }
 
@@ -89,7 +183,25 @@
     @apply status-dot bg-red-400 shadow-lg shadow-red-400/50;
   }
 
-  .status-idle {
+.status-idle {
     @apply status-dot bg-amber-400 shadow-lg shadow-amber-400/50;
+  }
+}
+
+/* Respect users who prefer reduced motion: disable decorative animations. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .arctes-orbit-ring,
+  .arctes-orbit-dot,
+  .arctes-typing-caret::after {
+    animation: none !important;
   }
 }

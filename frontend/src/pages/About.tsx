@@ -62,7 +62,7 @@ export default function About() {
           <GlassCard delay={0.2}>
             <h2 className="text-xl font-semibold text-white mb-3">Meet ARCTES</h2>
             <p className="text-white/40 leading-relaxed">
-              ARCTES (Autonomous Research & Content Technology Engine System) is our flagship
+              ARCTES (Autonomous Research & Technology Intelligence) is our flagship
               AI persona. It combines persistent memory, multi-agent orchestration, and
               editorial intelligence to act as a fully autonomous technology analyst
               and content producer.

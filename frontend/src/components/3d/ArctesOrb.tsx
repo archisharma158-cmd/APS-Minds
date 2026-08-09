@@ -6,15 +6,16 @@ import {
   Sparkles,
   Stars,
 } from "@react-three/drei";
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 
-function Core() {
+function Core({ reduced, mobile }: { reduced?: boolean; mobile?: boolean }) {
   const core = useRef<THREE.Mesh>(null);
   const ringOne = useRef<THREE.Mesh>(null);
   const ringTwo = useRef<THREE.Mesh>(null);
 
-  useFrame(({ clock }) => {
+useFrame(({ clock }) => {
+    if (reduced) return;
     const t = clock.getElapsedTime();
 
     if (core.current) {
@@ -121,47 +122,70 @@ function Core() {
         </mesh>
       </Float>
 
-      <Sparkles
-        count={140}
-        scale={[5, 5, 5]}
-        size={1.4}
-        speed={0.25}
+<Sparkles
+        count={mobile ? 60 : 140}
+        scale={mobile ? [3.5, 3.5, 3.5] : [5, 5, 5]}
+        size={mobile ? 1 : 1.4}
+        speed={mobile ? 0.15 : 0.25}
         color="#5de3ff"
       />
 
       <Stars
         radius={7}
         depth={5}
-        count={500}
+        count={mobile ? 200 : 500}
         factor={1.5}
         saturation={0}
         fade
-        speed={0.2}
+        speed={mobile ? 0.1 : 0.2}
       />
     </>
   );
 }
 
 export default function ArctesOrb() {
+  const [isMobile, setIsMobile] = useState(false);
+  const [reducedMotion, setReducedMotion] = useState(false);
+
+  useEffect(() => {
+    const check = () => {
+      setIsMobile(window.innerWidth < 640);
+      setReducedMotion(
+        window.matchMedia("(prefers-reduced-motion: reduce)").matches
+      );
+    };
+
+    check();
+    window.addEventListener("resize", check);
+
+    return () => window.removeEventListener("resize", check);
+  }, []);
+
   return (
-    <div className="h-[430px] w-[430px] sm:h-[540px] sm:w-[540px]">
+    <div
+      className={
+        isMobile
+          ? "h-[min(430px,82vw)] w-[min(430px,82vw)]"
+          : "h-[430px] w-[430px] sm:h-[540px] sm:w-[540px]"
+      }
+    >
       <Canvas
         camera={{
           position: [0, 0, 5],
           fov: 45,
         }}
-        dpr={[1, 2]}
+        dpr={[1, isMobile ? 1.5 : 2]}
         gl={{
-          antialias: true,
+          antialias: !isMobile,
           alpha: true,
         }}
       >
-        <Core />
+        <Core reduced={reducedMotion} mobile={isMobile} />
 
         <OrbitControls
           enableZoom={false}
           enablePan={false}
-          autoRotate
+          autoRotate={!reducedMotion}
           autoRotateSpeed={0.3}
           minPolarAngle={Math.PI / 2.3}
           maxPolarAngle={Math.PI / 1.7}
