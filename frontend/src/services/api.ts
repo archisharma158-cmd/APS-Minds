@@ -1,9 +1,10 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL:
-    import.meta.env.VITE_API_URL ||
-    (import.meta.env.DEV ? "/api" : "https://aps-minds.onrender.com/api"),
+  // In production, Vercel rewrites /api/* -> https://aps-minds.onrender.com/api/*
+  // so the browser never makes a cross-origin request (no CORS preflight).
+  // In dev, Vite proxies /api -> the Render backend on port 5173.
+  baseURL: import.meta.env.VITE_API_URL || "/api",
   headers: { "Content-Type": "application/json" },
 });
 

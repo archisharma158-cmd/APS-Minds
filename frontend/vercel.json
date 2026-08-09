@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://aps-minds.onrender.com/api/:path*"
+    }
+  ]
+}
