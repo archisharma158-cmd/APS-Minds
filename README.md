@@ -1331,16 +1331,65 @@ APS Minds:
 
 <div align="center">
 
-### APS MINDS — ARCTES AI
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:020617,50:0f172a,100:020617&height=70&text=APS%20MINDS%20%2F%2F%20ARCTES%20AI&fontSize=24&fontColor=38BDF8&fontAlignY=55&animation=fadeIn" width="90%"/>
 
-**Archi Sharma**
-Development • Backend • Integration
+<br/><br/>
 
-**Parth Goyal**
-Development • Frontend • System Design
+<table>
+<tr>
+<td align="center" width="33%">
 
-**Sonu Sharma**
-AI/ML • Architecture • AI Integration
+<img src="https://capsule-render.vercel.app/api?type=rounded&color=0:0ea5e9,100:7c3aed&height=110&section=header&text=ARCHI%20SHARMA&fontSize=22&fontColor=ffffff&animation=fadeIn" width="100%"/>
+
+<br/>
+
+**⚡ DEVELOPMENT**
+
+`BACKEND` • `INTEGRATION`
+
+<img src="https://img.shields.io/badge/BACKEND-0f172a?style=for-the-badge&logo=fastapi&logoColor=38bdf8"/>
+<br/>
+<img src="https://img.shields.io/badge/INTEGRATION-0f172a?style=for-the-badge&logo=api&logoColor=a78bfa"/>
+
+</td>
+
+<td align="center" width="33%">
+
+<img src="https://capsule-render.vercel.app/api?type=rounded&color=0:2563eb,100:06b6d4&height=110&section=header&text=PARTH%20GOYAL&fontSize=22&fontColor=ffffff&animation=fadeIn" width="100%"/>
+
+<br/>
+
+**🎨 DEVELOPMENT**
+
+`FRONTEND` • `SYSTEM DESIGN`
+
+<img src="https://img.shields.io/badge/FRONTEND-0f172a?style=for-the-badge&logo=react&logoColor=38bdf8"/>
+<br/>
+<img src="https://img.shields.io/badge/SYSTEM%20DESIGN-0f172a?style=for-the-badge&logo=blueprint&logoColor=22d3ee"/>
+
+</td>
+
+<td align="center" width="33%">
+
+<img src="https://capsule-render.vercel.app/api?type=rounded&color=0:7c3aed,100:0ea5e9&height=110&section=header&text=SONU%20SHARMA&fontSize=22&fontColor=ffffff&animation=fadeIn" width="100%"/>
+
+<br/>
+
+**🧠 AI/ML**
+
+`ARCHITECTURE` • `AI INTEGRATION`
+
+<img src="https://img.shields.io/badge/AI%2FML-0f172a?style=for-the-badge&logo=python&logoColor=38bdf8"/>
+<br/>
+<img src="https://img.shields.io/badge/AI%20INTEGRATION-0f172a?style=for-the-badge&logo=openai&logoColor=a78bfa"/>
+
+</td>
+</tr>
+</table>
+
+<br/>
+
+<img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=600&size=16&duration=2800&pause=900&color=38BDF8&center=true&vCenter=true&width=850&lines=THREE+MINDS.;ONE+SYSTEM.;UNIFIED+INTELLIGENCE." alt="Team animated statement"/>
 
 </div>
 
