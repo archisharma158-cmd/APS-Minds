@@ -1,10 +1,35 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:020617,50:0ea5e9,100:7c3aed&height=220&section=header&text=ARCTES%20AI&fontSize=58&fontColor=ffffff&fontAlignY=38&desc=ONE%20INTERFACE.%20MULTIPLE%20AGENTS.%20UNIFIED%20INTELLIGENCE.&descAlignY=61&descSize=14&animation=fadeIn" width="100%"/>
+<!--
+REPOSITORY ASSETS
+Put these files inside:
+APS-Minds/
+└── assets/
+    ├── aps-minds-banner.png
+    └── aps-minds-logo.png
+-->
+
+<img src="./assets/aps-minds-banner.png" alt="APS Minds — Arctes AI Banner" width="100%"/>
+
+<br/>
+
+<img src="./assets/aps-minds-logo.png" alt="APS Minds Logo" width="150"/>
 
 <br/>
 
 <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=600&size=22&duration=2800&pause=900&color=38BDF8&center=true&vCenter=true&width=900&lines=RESEARCH.+ANALYZE.+REASON.+SYNTHESIZE.;MULTI-AGENT+INTELLIGENCE+SYSTEM;REAL-TIME+WEB+%2B+NEWS+%2B+GITHUB+INTELLIGENCE;POWERED+BY+APS+MINDS" alt="Animated Arctes AI tagline"/>
+
+<br/><br/>
+
+<a href="<YOUR_REPOSITORY_URL>">
+<img src="https://img.shields.io/badge/⭐%20STAR%20THIS%20REPO-38BDF8?style=for-the-badge&logo=github&logoColor=white&labelColor=020617" alt="Star this repository"/>
+</a>
+<a href="<YOUR_REPOSITORY_URL>/fork">
+<img src="https://img.shields.io/badge/🍴%20FORK%20PROJECT-7C3AED?style=for-the-badge&logo=github&logoColor=white&labelColor=020617" alt="Fork this repository"/>
+</a>
+<a href="<YOUR_REPOSITORY_URL>/issues">
+<img src="https://img.shields.io/badge/🐛%20REPORT%20ISSUE-EF4444?style=for-the-badge&logo=github&logoColor=white&labelColor=020617" alt="Report an issue"/>
+</a>
 
 <br/><br/>
 
@@ -18,6 +43,32 @@
 > ### 🧠 A multi-agent intelligence platform built to research, retrieve, analyze and synthesize information through specialized AI capabilities.
 
 </div>
+
+---
+
+> **🎨 Visual Assets:** The README expects `assets/aps-minds-banner.png` and `assets/aps-minds-logo.png`.
+> Keep both files inside an `assets` folder at the root of the repository.
+
+## ⚡ SYSTEM BOOT
+
+```text
+┌─────────────────────────────────────────────────────────────────────┐
+│                         ARCTES AI // CORE                            │
+├─────────────────────────────────────────────────────────────────────┤
+│  [✓] Orchestrator initialized                                      │
+│  [✓] Research Agent online                                         │
+│  [✓] GitHub Intelligence online                                    │
+│  [✓] News Intelligence online                                      │
+│  [✓] AI Reasoning online                                            │
+│  [✓] External API layer connected                                   │
+│                                                                     │
+│  STATUS: OPERATIONAL                                                │
+└─────────────────────────────────────────────────────────────────────┘
+```
+
+<p align="center">
+  <img src="https://github.com/Platane/snk/raw/output/github-contribution-grid-snake-dark.svg" alt="Animated contribution grid" width="85%"/>
+</p>
 
 ---
 
@@ -64,26 +115,26 @@
 | [🎯 Problem We Solve](#-problem-we-solve)                          | Problem statement and proposed solution      |
 | [🧠 The Five AI Integrations](#-the-five-ai-integrations)          | Overview of the five AI-powered integrations |
 | [🔄 How Arctes AI Works](#-how-arctes-ai-works)                    | Multi-agent workflow and request lifecycle   |
-| [✨ Features](#-features)                                          | Key platform features and capabilities       |
-| [🏗️ Architecture](#-architecture)                                  | Overall system architecture                  |
+| [✨ Features](#-features)                                           | Key platform features and capabilities       |
+| [🏗️ Architecture](#-architecture)                                 | Overall system architecture                  |
 | [🎨 Frontend](#-frontend)                                          | Frontend technologies and structure          |
-| [⚙️ Backend](#️-backend)                                            | Backend architecture and responsibilities    |
+| [⚙️ Backend](#️-backend)                                           | Backend architecture and responsibilities    |
 | [🧠 Agent Architecture](#-agent-architecture)                      | Specialized agent architecture               |
-| [🗄️ Database](#-database)                                          | Database and migration architecture          |
-| [☁️ Infrastructure](#️-infrastructure)                              | Deployment and infrastructure components     |
+| [🗄️ Database](#-database)                                         | Database and migration architecture          |
+| [☁️ Infrastructure](#️-infrastructure)                             | Deployment and infrastructure components     |
 | [📁 Project Structure](#-project-structure)                        | Complete repository structure                |
 | [🧩 Project Structure Explained](#-project-structure-explained)    | Explanation of important directories         |
 | [🔌 Frontend ↔ Backend](#-frontend--backend-communication)         | API communication architecture               |
 | [🔒 Security](#-security)                                          | Authentication and security practices        |
 | [🔑 Environment Variables](#-environment-variables)                | API keys and configuration                   |
 | [📡 Mock APIs & Data Sources](#-mock-apis--data-sources)           | Development and testing data sources         |
-| [⏱️ APScheduler](#️-apscheduler)                                    | Background jobs and automation               |
-| [🛠️ Installation & Setup](#️-installation--setup)                   | Local development setup                      |
+| [⏱️ APScheduler](#️-apscheduler)                                   | Background jobs and automation               |
+| [🛠️ Installation & Setup](#️-installation--setup)                 | Local development setup                      |
 | [🔄 Complete Request Lifecycle](#-complete-request-lifecycle)      | End-to-end request flow                      |
 | [💡 Example Multi-Agent Request](#-example-multi-agent-request)    | Example of agent collaboration               |
 | [📊 Why Multi-Agent Architecture?](#-why-multi-agent-architecture) | Benefits of the multi-agent approach         |
 | [🧰 Tech Stack](#-tech-stack)                                      | Technologies and tools used                  |
-| [🗺️ Roadmap](#️-roadmap)                                            | Current and planned development              |
+| [🗺️ Roadmap](#️-roadmap)                                          | Current and planned development              |
 | [👥 Team](#-team)                                                  | APS Minds hackathon team                     |
 | [🏆 Vision](#-vision)                                              | Long-term vision of Arctes AI                |
 
@@ -99,15 +150,15 @@ Instead of relying on a single AI model for every task, Arctes AI connects multi
 
 The platform combines:
 
-- 🤖 AI reasoning and generation
-- 🔎 Real-time web research
-- 📰 Current news intelligence
-- 🐙 GitHub intelligence
-- 🌐 External APIs
-- 🔐 Secure authentication
-- 🗄️ Persistent data storage
-- ⚡ Scheduled background jobs
-- 🎨 Modern responsive UI
+* 🤖 AI reasoning and generation
+* 🔎 Real-time web research
+* 📰 Current news intelligence
+* 🐙 GitHub intelligence
+* 🌐 External APIs
+* 🔐 Secure authentication
+* 🗄️ Persistent data storage
+* ⚡ Scheduled background jobs
+* 🎨 Modern responsive UI
 
 ### Core Philosophy
 
@@ -121,12 +172,12 @@ The platform combines:
 
 Traditional AI assistants have several limitations:
 
-- Knowledge may become outdated
-- They may not have access to current web information
-- They cannot always perform deep research
-- They may lack direct GitHub intelligence
-- They depend heavily on a single model
-- One general-purpose AI is expected to handle completely different tasks
+* Knowledge may become outdated
+* They may not have access to current web information
+* They cannot always perform deep research
+* They may lack direct GitHub intelligence
+* They depend heavily on a single model
+* One general-purpose AI is expected to handle completely different tasks
 
 For research-heavy applications, this creates a major challenge:
 
@@ -160,12 +211,12 @@ OpenRouter is the **default AI provider** used by Arctes AI.
 
 It provides the underlying language-model capabilities required for:
 
-- Natural language understanding
-- Reasoning
-- Response generation
-- Context processing
-- AI orchestration
-- Intelligent synthesis
+* Natural language understanding
+* Reasoning
+* Response generation
+* Context processing
+* AI orchestration
+* Intelligent synthesis
 
 ### Flow
 
@@ -193,12 +244,12 @@ It allows the system to retrieve relevant information from the web when a user's
 
 ### Responsibilities
 
-- Web search
-- Research
-- Information retrieval
-- Source discovery
-- Current information gathering
-- Context enrichment
+* Web search
+* Research
+* Information retrieval
+* Source discovery
+* Current information gathering
+* Context enrichment
 
 ### Example
 
@@ -236,12 +287,12 @@ It is connected to the **APS MINDS** project ecosystem.
 
 ### Responsibilities
 
-- Repository information
-- Project discovery
-- Developer research
-- Repository metadata
-- Code/project context
-- GitHub-based intelligence
+* Repository information
+* Project discovery
+* Developer research
+* Repository metadata
+* Code/project context
+* GitHub-based intelligence
 
 ### Example Queries
 
@@ -267,12 +318,12 @@ This enables Arctes AI to work with recent events and news-related queries.
 
 ### Responsibilities
 
-- Latest news
-- Current events
-- Topic-based news
-- News discovery
-- News filtering
-- Recent information retrieval
+* Latest news
+* Current events
+* Topic-based news
+* News discovery
+* News filtering
+* Recent information retrieval
 
 ### Example
 
@@ -310,11 +361,11 @@ It is integrated independently so that its functionality can evolve without affe
 
 ### Responsibilities
 
-- Specialized API-powered intelligence
-- External data retrieval
-- Agent-specific processing
-- APS Minds ecosystem integration
-- Future specialized capabilities
+* Specialized API-powered intelligence
+* External data retrieval
+* Agent-specific processing
+* APS Minds ecosystem integration
+* Future specialized capabilities
 
 The modular architecture allows this agent to be expanded as the platform evolves.
 
@@ -370,61 +421,61 @@ The overall system follows this architecture:
 
 ## 🔐 Authentication
 
-- ✅ Full JWT authentication
-- ✅ User signup
-- ✅ User login
-- ✅ Logout
-- ✅ Persistent sessions
-- ✅ Protected routes
-- ✅ Automatic token-refresh awareness
+* ✅ Full JWT authentication
+* ✅ User signup
+* ✅ User login
+* ✅ Logout
+* ✅ Persistent sessions
+* ✅ Protected routes
+* ✅ Automatic token-refresh awareness
 
 ## 🤖 AI & Agents
 
-- ✅ Multi-agent architecture
-- ✅ OpenRouter as default AI provider
-- ✅ Tavily-powered web research
-- ✅ GitHub integration
-- ✅ NewsAPI integration
-- ✅ Beether API integration
-- ✅ Modular agent services
-- ✅ Extensible agent architecture
+* ✅ Multi-agent architecture
+* ✅ OpenRouter as default AI provider
+* ✅ Tavily-powered web research
+* ✅ GitHub integration
+* ✅ NewsAPI integration
+* ✅ Beether API integration
+* ✅ Modular agent services
+* ✅ Extensible agent architecture
 
 #<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:020617,50:0f172a,100:020617&height=2&section=header" width="100%"/></div>
 
 # 🎨 Frontend
 
-- ✅ Modern glassmorphism dark-theme UI
-- ✅ Responsive layout
-- ✅ Professional animations
-- ✅ Component-based architecture
-- ✅ Dashboard
-- ✅ System status cards
-- ✅ AI interaction interface
+* ✅ Modern glassmorphism dark-theme UI
+* ✅ Responsive layout
+* ✅ Professional animations
+* ✅ Component-based architecture
+* ✅ Dashboard
+* ✅ System status cards
+* ✅ AI interaction interface
 
 #<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:020617,50:0f172a,100:020617&height=2&section=header" width="100%"/></div>
 
 # ⚙️ Backend
 
-- ✅ FastAPI backend
-- ✅ Modular API routes
-- ✅ Service-based architecture
-- ✅ JWT authentication
-- ✅ SQLAlchemy
-- ✅ SQLite database
-- ✅ Alembic migrations
-- ✅ Middleware
-- ✅ APScheduler
-- ✅ Background-job ready architecture
+* ✅ FastAPI backend
+* ✅ Modular API routes
+* ✅ Service-based architecture
+* ✅ JWT authentication
+* ✅ SQLAlchemy
+* ✅ SQLite database
+* ✅ Alembic migrations
+* ✅ Middleware
+* ✅ APScheduler
+* ✅ Background-job ready architecture
 
 ## 🔌 Integrations
 
-- ✅ Frontend ↔ Backend communication through Axios
-- ✅ OpenRouter
-- ✅ Tavily
-- ✅ GitHub
-- ✅ NewsAPI
-- ✅ Beether API
-- ✅ Environment-based API configuration
+* ✅ Frontend ↔ Backend communication through Axios
+* ✅ OpenRouter
+* ✅ Tavily
+* ✅ GitHub
+* ✅ NewsAPI
+* ✅ Beether API
+* ✅ Environment-based API configuration
 
 ---
 
@@ -469,14 +520,14 @@ The frontend is responsible for providing a modern and responsive interface for 
 
 ### Technologies
 
-- React
-- TypeScript
-- Vite
-- Axios
-- Modern CSS
-- Glassmorphism UI
-- Responsive design
-- Animations
+* React
+* TypeScript
+* Vite
+* Axios
+* Modern CSS
+* Glassmorphism UI
+* Responsive design
+* Animations
 
 ### Frontend Architecture
 
@@ -499,10 +550,10 @@ Reusable UI elements and application components.
 
 Application-level screens such as:
 
-- Login
-- Signup
-- Dashboard
-- AI interface
+* Login
+* Signup
+* Dashboard
+* AI interface
 
 ### Services
 
@@ -532,15 +583,15 @@ It acts as the central application layer between the frontend, database, AI agen
 
 ### Responsibilities
 
-- API endpoints
-- Authentication
-- Database operations
-- Agent execution
-- External API communication
-- Request validation
-- Error handling
-- Security
-- Background jobs
+* API endpoints
+* Authentication
+* Database operations
+* Agent execution
+* External API communication
+* Request validation
+* Error handling
+* Security
+* Background jobs
 
 ### Backend Architecture
 
@@ -597,9 +648,9 @@ The **Beether API-powered capability** operates as an additional specialized ser
 
 APS Minds uses:
 
-- **SQLite**
-- **SQLAlchemy**
-- **Alembic**
+* **SQLite**
+* **SQLAlchemy**
+* **Alembic**
 
 ### Database Flow
 
@@ -702,10 +753,10 @@ Main FastAPI application entry point.
 
 Responsible for:
 
-- Creating the FastAPI application
-- Registering routes
-- Middleware configuration
-- Application initialization
+* Creating the FastAPI application
+* Registering routes
+* Middleware configuration
+* Application initialization
 
 ---
 
@@ -715,10 +766,10 @@ Centralized configuration management.
 
 Handles:
 
-- Environment variables
-- API configuration
-- Security settings
-- Application settings
+* Environment variables
+* API configuration
+* Security settings
+* Application settings
 
 ---
 
@@ -726,9 +777,9 @@ Handles:
 
 Responsible for:
 
-- Database connection
-- Database sessions
-- SQLAlchemy configuration
+* Database connection
+* Database sessions
+* SQLAlchemy configuration
 
 ---
 
@@ -736,10 +787,10 @@ Responsible for:
 
 Contains database models such as:
 
-- Users
-- Authentication data
-- Agent-related entities
-- Application data
+* Users
+* Authentication data
+* Agent-related entities
+* Application data
 
 ---
 
@@ -747,10 +798,10 @@ Contains database models such as:
 
 Contains Pydantic schemas for:
 
-- Request validation
-- Response validation
-- API contracts
-- Type-safe data handling
+* Request validation
+* Response validation
+* API contracts
+* Type-safe data handling
 
 ---
 
@@ -787,10 +838,10 @@ services/
 
 Handles cross-cutting backend functionality such as:
 
-- Authentication
-- Error handling
-- Request processing
-- Security middleware
+* Authentication
+* Error handling
+* Request processing
+* Security middleware
 
 ---
 
@@ -829,14 +880,14 @@ The application uses **JWT authentication** for secure access to protected resou
 
 ### Security Features
 
-- 🔒 JWT authentication
-- 🔒 Protected API routes
-- 🔒 Password-protected accounts
-- 🔒 Persistent authentication sessions
-- 🔒 Environment-based secrets
-- 🔒 Input validation
-- 🔒 Middleware-based protection
-- 🔒 API key isolation
+* 🔒 JWT authentication
+* 🔒 Protected API routes
+* 🔒 Password-protected accounts
+* 🔒 Persistent authentication sessions
+* 🔒 Environment-based secrets
+* 🔒 Input validation
+* 🔒 Middleware-based protection
+* 🔒 API key isolation
 
 ---
 
@@ -896,11 +947,11 @@ APS Minds can support both **real external APIs** and **mock/test data** during 
 
 Mock data can be used for:
 
-- Frontend development
-- UI testing
-- Agent testing
-- API failure simulation
-- Development without consuming API quotas
+* Frontend development
+* UI testing
+* Agent testing
+* API failure simulation
+* Development without consuming API quotas
 
 This allows the system to remain testable even when external services are unavailable.
 
@@ -914,12 +965,12 @@ This allows the system to remain testable even when external services are unavai
 
 Potential applications include:
 
-- Scheduled research
-- News monitoring
-- GitHub monitoring
-- Automated reports
-- Data refresh
-- Periodic agent execution
+* Scheduled research
+* News monitoring
+* GitHub monitoring
+* Automated reports
+* Data refresh
+* Periodic agent execution
 
 ### Future Example
 
@@ -1092,9 +1143,9 @@ Arctes AI can break the request into specialized tasks.
 
 The system identifies that the request requires:
 
-- Current web research
-- Developer/GitHub information
-- AI reasoning
+* Current web research
+* Developer/GitHub information
+* AI reasoning
 
 ### Step 2 — Research
 
@@ -1184,14 +1235,14 @@ APS Minds:
 
 ### Benefits
 
-- 🎯 Task specialization
-- 🔎 Better information retrieval
-- 🧩 Modular architecture
-- 🔌 Easy API integration
-- 📈 Scalable design
-- 🛠️ Easier debugging
-- 🚀 Future agent expansion
-- 🧠 Better contextual responses
+* 🎯 Task specialization
+* 🔎 Better information retrieval
+* 🧩 Modular architecture
+* 🔌 Easy API integration
+* 📈 Scalable design
+* 🛠️ Easier debugging
+* 🚀 Future agent expansion
+* 🧠 Better contextual responses
 
 ---
 
@@ -1201,48 +1252,48 @@ APS Minds:
 
 ## Frontend
 
-- React
-- TypeScript
-- Vite
-- Axios
-- Responsive UI
-- Glassmorphism design
-- Animations
+* React
+* TypeScript
+* Vite
+* Axios
+* Responsive UI
+* Glassmorphism design
+* Animations
 
 ## Backend
 
-- Python
-- FastAPI
-- Pydantic
-- SQLAlchemy
-- Alembic
-- APScheduler
+* Python
+* FastAPI
+* Pydantic
+* SQLAlchemy
+* Alembic
+* APScheduler
 
 ## Database
 
-- SQLite
-- SQLAlchemy
-- Alembic
+* SQLite
+* SQLAlchemy
+* Alembic
 
 ## AI & Intelligence
 
-- OpenRouter
-- Tavily
-- GitHub API
-- NewsAPI
-- Beether API
+* OpenRouter
+* Tavily
+* GitHub API
+* NewsAPI
+* Beether API
 
 ## Authentication
 
-- JWT
-- Protected routes
-- Secure environment configuration
+* JWT
+* Protected routes
+* Secure environment configuration
 
 ## Infrastructure
 
-- Supabase
-- Environment variables
-- Modular backend architecture
+* Supabase
+* Environment variables
+* Modular backend architecture
 
 ---
 
@@ -1252,56 +1303,56 @@ APS Minds:
 
 ## Phase 1 — Foundation
 
-- [x] Project architecture
-- [x] Frontend setup
-- [x] Backend setup
-- [x] Database
-- [x] Authentication
-- [x] JWT protection
-- [x] Dashboard
-- [x] API communication
+* [x] Project architecture
+* [x] Frontend setup
+* [x] Backend setup
+* [x] Database
+* [x] Authentication
+* [x] JWT protection
+* [x] Dashboard
+* [x] API communication
 
 ## Phase 2 — AI Integration
 
-- [x] OpenRouter integration
-- [x] AI service architecture
-- [x] Agent-ready backend
+* [x] OpenRouter integration
+* [x] AI service architecture
+* [x] Agent-ready backend
 
 ## Phase 3 — Multi-Agent Intelligence
 
-- [x] Tavily integration
-- [x] GitHub integration
-- [x] NewsAPI integration
-- [x] Beether API integration
-- [x] Specialized agent architecture
+* [x] Tavily integration
+* [x] GitHub integration
+* [x] NewsAPI integration
+* [x] Beether API integration
+* [x] Specialized agent architecture
 
 ## Phase 4 — Automation
 
-- [x] APScheduler foundation
-- [ ] Scheduled research
-- [ ] Automated news monitoring
-- [ ] GitHub monitoring
-- [ ] Automated intelligence reports
+* [x] APScheduler foundation
+* [ ] Scheduled research
+* [ ] Automated news monitoring
+* [ ] GitHub monitoring
+* [ ] Automated intelligence reports
 
 ## Phase 5 — Advanced Intelligence
 
-- [ ] Agent memory
-- [ ] Persistent conversation context
-- [ ] Advanced intent classification
-- [ ] Agent-to-agent communication
-- [ ] Source credibility scoring
-- [ ] Automated research reports
-- [ ] Advanced analytics
+* [ ] Agent memory
+* [ ] Persistent conversation context
+* [ ] Advanced intent classification
+* [ ] Agent-to-agent communication
+* [ ] Source credibility scoring
+* [ ] Automated research reports
+* [ ] Advanced analytics
 
 ## Phase 6 — Production
 
-- [ ] Production database
-- [ ] Containerization
-- [ ] CI/CD
-- [ ] Monitoring
-- [ ] Advanced logging
-- [ ] Performance optimization
-- [ ] Horizontal scaling
+* [ ] Production database
+* [ ] Containerization
+* [ ] CI/CD
+* [ ] Monitoring
+* [ ] Advanced logging
+* [ ] Performance optimization
+* [ ] Horizontal scaling
 
 ---
 
@@ -1316,12 +1367,12 @@ APS Minds:
 | [Features](#-features)                             | Platform capabilities |
 | [Architecture](#-architecture)                     | System architecture   |
 | [Frontend](#-frontend)                             | Frontend architecture |
-| [Backend](#️-backend)                               | Backend architecture  |
+| [Backend](#️-backend)                              | Backend architecture  |
 | [Project Structure](#-project-structure)           | Repository structure  |
 | [Security](#-security)                             | Security architecture |
 | [Tech Stack](#-tech-stack)                         | Technologies          |
-| [Installation](#️-installation--setup)              | Setup instructions    |
-| [Roadmap](#️-roadmap)                               | Future development    |
+| [Installation](#️-installation--setup)             | Setup instructions    |
+| [Roadmap](#️-roadmap)                              | Future development    |
 
 ---
 
@@ -1331,22 +1382,108 @@ APS Minds:
 
 <div align="center">
 
-### APS MINDS — ARCTES AI
+## 🎬 APS MINDS // ARCTES AI
 
-**Archi Sharma**
-AI/ML • Architecture • AI Integration
+**THE TEAM BEHIND THE SYSTEM**
 
-**Parth Goyal**
-Development • Frontend • System Design
+<br/>
 
-**Sonu Sharma**
-Development • Backend • Integration
+<table>
+<tr>
+<td align="center" width="33%">
+
+<img src="https://img.shields.io/badge/AI%2FML-ARCHITECTURE-38BDF8?style=for-the-badge&labelColor=020617"/>
+
+### 🧠 Archi Sharma
+
+**AI/ML • Architecture • AI Integration**
+
+Designs the intelligence layer, agent architecture and AI integrations.
+
+</td>
+
+<td align="center" width="33%">
+
+<img src="https://img.shields.io/badge/ENGINEERING-FRONTEND-7C3AED?style=for-the-badge&labelColor=020617"/>
+
+### ⚡ Parth Goyal
+
+**Development • Frontend • System Design**
+
+Builds the user-facing experience and contributes to the overall system design.
+
+</td>
+
+<td align="center" width="33%">
+
+<img src="https://img.shields.io/badge/ENGINEERING-BACKEND-22C55E?style=for-the-badge&labelColor=020617"/>
+
+### 🔥 Sonu Sharma
+
+**Development • Backend • Integration**
+
+Builds backend services, API integrations and the application infrastructure.
+
+</td>
+</tr>
+</table>
+
+<br/>
+
+```text
+                         APS MINDS
+                            │
+             ┌──────────────┼──────────────┐
+             │              │              │
+             ▼              ▼              ▼
+          ARCHITECT      FRONTEND       BACKEND
+             │              │              │
+          AI / ML         UX/UI          APIs
+          AGENTS          SYSTEM         DATA
+          RESEARCH        DESIGN        INTEGRATION
+             │              │              │
+             └──────────────┼──────────────┘
+                            ▼
+                     ┌──────────────┐
+                     │  ARCTES AI   │
+                     └──────────────┘
+```
+
+### 🏆 Credits
+
+> **Three roles. One system. One intelligence platform.**
 
 </div>
 
 ---
 
 <div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:020617,50:0f172a,100:020617&height=2&section=header" width="100%"/></div>
+
+---
+
+# ⭐ Support the Project
+
+<div align="center">
+
+### If APS Minds is useful, give the repository a ⭐
+
+<a href="<YOUR_REPOSITORY_URL>">
+<img src="https://img.shields.io/badge/⭐%20STAR%20APS%20MINDS-38BDF8?style=for-the-badge&logo=github&logoColor=white&labelColor=020617"/>
+</a>
+
+<a href="<YOUR_REPOSITORY_URL>/fork">
+<img src="https://img.shields.io/badge/🍴%20FORK%20APS%20MINDS-7C3AED?style=for-the-badge&logo=github&logoColor=white&labelColor=020617"/>
+</a>
+
+<a href="<YOUR_REPOSITORY_URL>/issues">
+<img src="https://img.shields.io/badge/💡%20SUGGEST%20AN%20IDEA-22C55E?style=for-the-badge&logo=github&logoColor=white&labelColor=020617"/>
+</a>
+
+<br/><br/>
+
+**Every star helps the project gain visibility.**
+
+</div>
 
 # 🏆 Vision
 
