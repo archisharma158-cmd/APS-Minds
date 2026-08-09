@@ -7,10 +7,15 @@ const api = axios.create({
   headers: { "Content-Type": "application/json" },
 });
 
-// Attach JWT token to every request if available
+// Attach JWT token to authenticated requests only.
+// Skip login/signup: sending an Authorization header there would make the
+// browser's preflight request include `authorization` in
+// Access-Control-Request-Headers, which can cause a CORS 400 on OPTIONS.
 api.interceptors.request.use((config) => {
   const token = localStorage.getItem("aps_token");
-  if (token) {
+  const isAuthEndpoint =
+    config.url?.includes("/auth/login") || config.url?.includes("/auth/signup");
+  if (token && !isAuthEndpoint) {
     config.headers.Authorization = `Bearer ${token}`;
   }
   return config;
