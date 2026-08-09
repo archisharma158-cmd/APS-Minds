@@ -1,24 +1,46 @@
-# 🧠 APS MINDS — ARCTES AI
-
 <div align="center">
 
-## A Multi-Agent Intelligence Platform for Research, Analysis & Real-Time Information
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:020617,50:0ea5e9,100:7c3aed&height=220&section=header&text=ARCTES%20AI&fontSize=58&fontColor=ffffff&fontAlignY=38&desc=ONE%20INTERFACE.%20MULTIPLE%20AGENTS.%20UNIFIED%20INTELLIGENCE.&descAlignY=61&descSize=14&animation=fadeIn" width="100%"/>
 
-<p>
-<img src="https://img.shields.io/badge/STATUS-ACTIVE-ef4444?style=for-the-badge" />
-<img src="https://img.shields.io/badge/AI-MULTI--AGENT-2563eb?style=for-the-badge" />
-<img src="https://img.shields.io/badge/APS-MINDS-22c55e?style=for-the-badge" />
-</p>
+<br/>
 
-<p>
-<b>Arctes AI</b> is a multi-agent intelligence platform designed to research,
-retrieve, analyze, and synthesize information using specialized AI-powered
-agents and external data sources.
-</p>
+<img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=600&size=22&duration=2800&pause=900&color=38BDF8&center=true&vCenter=true&width=900&lines=RESEARCH.+ANALYZE.+REASON.+SYNTHESIZE.;MULTI-AGENT+INTELLIGENCE+SYSTEM;REAL-TIME+WEB+%2B+NEWS+%2B+GITHUB+INTELLIGENCE;POWERED+BY+APS+MINDS" alt="Animated Arctes AI tagline"/>
+
+<br/><br/>
+
+<img src="https://img.shields.io/badge/STATUS-ACTIVE-ef4444?style=for-the-badge&labelColor=020617"/>
+<img src="https://img.shields.io/badge/AI-MULTI--AGENT-2563eb?style=for-the-badge&labelColor=020617"/>
+<img src="https://img.shields.io/badge/APS-MINDS-22c55e?style=for-the-badge&labelColor=020617"/>
+<img src="https://img.shields.io/badge/ARCHITECTURE-MODULAR-a855f7?style=for-the-badge&labelColor=020617"/>
+
+<br/><br/>
+
+> ### 🧠 A multi-agent intelligence platform built to research, retrieve, analyze and synthesize information through specialized AI capabilities.
 
 </div>
 
 ---
+
+## ⚡ SYSTEM BOOT
+
+```text
+┌─────────────────────────────────────────────────────────────────────┐
+│                         ARCTES AI // CORE                            │
+├─────────────────────────────────────────────────────────────────────┤
+│  [✓] Orchestrator initialized                                      │
+│  [✓] Research Agent online                                         │
+│  [✓] GitHub Intelligence online                                    │
+│  [✓] News Intelligence online                                      │
+│  [✓] AI Reasoning online                                            │
+│  [✓] External API layer connected                                   │
+│                                                                     │
+│  STATUS: OPERATIONAL                                                │
+└─────────────────────────────────────────────────────────────────────┘
+```
+
+<p align="center">
+  <img src="https://github.com/Platane/snk/raw/output/github-contribution-grid-snake-dark.svg" alt="Animated contribution grid" width="85%"/>
+</p>
 
 ## 🔴 PROJECT STATUS
 
@@ -67,6 +89,8 @@ agents and external data sources.
 
 ---
 
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:020617,50:0f172a,100:020617&height=2&section=header" width="100%"/></div>
+
 # 🚀 About APS Minds
 
 **APS Minds** is an AI-powered intelligence platform built around **Arctes AI**, a multi-agent architecture designed to handle different categories of tasks using specialized AI capabilities.
@@ -90,6 +114,8 @@ The platform combines:
 > **The right agent should use the right tool for the right task.**
 
 ---
+
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:020617,50:0f172a,100:020617&height=2&section=header" width="100%"/></div>
 
 # 🎯 Problem We Solve
 
@@ -123,6 +149,8 @@ Each capability is connected to an appropriate external service.
 The result is a platform capable of combining information from multiple sources before generating a response.
 
 ---
+
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:020617,50:0f172a,100:020617&height=2&section=header" width="100%"/></div>
 
 # 🧠 The Five AI Integrations
 
@@ -292,6 +320,8 @@ The modular architecture allows this agent to be expanded as the platform evolve
 
 ---
 
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:020617,50:0f172a,100:020617&height=2&section=header" width="100%"/></div>
+
 # 🔄 How Arctes AI Works
 
 The overall system follows this architecture:
@@ -334,6 +364,8 @@ The overall system follows this architecture:
 
 ---
 
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:020617,50:0f172a,100:020617&height=2&section=header" width="100%"/></div>
+
 # ✨ Features
 
 ## 🔐 Authentication
@@ -357,7 +389,9 @@ The overall system follows this architecture:
 - ✅ Modular agent services
 - ✅ Extensible agent architecture
 
-## 🎨 Frontend
+#<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:020617,50:0f172a,100:020617&height=2&section=header" width="100%"/></div>
+
+# 🎨 Frontend
 
 - ✅ Modern glassmorphism dark-theme UI
 - ✅ Responsive layout
@@ -367,7 +401,9 @@ The overall system follows this architecture:
 - ✅ System status cards
 - ✅ AI interaction interface
 
-## ⚙️ Backend
+#<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:020617,50:0f172a,100:020617&height=2&section=header" width="100%"/></div>
+
+# ⚙️ Backend
 
 - ✅ FastAPI backend
 - ✅ Modular API routes
@@ -391,6 +427,8 @@ The overall system follows this architecture:
 - ✅ Environment-based API configuration
 
 ---
+
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:020617,50:0f172a,100:020617&height=2&section=header" width="100%"/></div>
 
 # 🏗️ Architecture
 
@@ -422,6 +460,8 @@ APS Minds follows a modular full-stack architecture.
 ```
 
 ---
+
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:020617,50:0f172a,100:020617&height=2&section=header" width="100%"/></div>
 
 # 🎨 Frontend
 
@@ -482,6 +522,8 @@ TypeScript interfaces and application-level types.
 
 ---
 
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:020617,50:0f172a,100:020617&height=2&section=header" width="100%"/></div>
+
 # ⚙️ Backend
 
 The backend is built using **FastAPI**.
@@ -518,6 +560,8 @@ backend/app/
 
 ---
 
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:020617,50:0f172a,100:020617&height=2&section=header" width="100%"/></div>
+
 # 🧠 Agent Architecture
 
 The agent layer is organized around specialized services.
@@ -547,6 +591,8 @@ The **Beether API-powered capability** operates as an additional specialized ser
 
 ---
 
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:020617,50:0f172a,100:020617&height=2&section=header" width="100%"/></div>
+
 # 🗄️ Database
 
 APS Minds uses:
@@ -570,6 +616,8 @@ Alembic
 Alembic provides controlled database migrations and allows the schema to evolve safely.
 
 ---
+
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:020617,50:0f172a,100:020617&height=2&section=header" width="100%"/></div>
 
 # ☁️ Infrastructure
 
@@ -597,6 +645,8 @@ APS Minds follows a separated frontend/backend infrastructure model.
 The backend URL/infrastructure is configured through environment variables, allowing the deployment environment to be changed without modifying application code.
 
 ---
+
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:020617,50:0f172a,100:020617&height=2&section=header" width="100%"/></div>
 
 # 📁 Project Structure
 
@@ -744,6 +794,8 @@ Handles cross-cutting backend functionality such as:
 
 ---
 
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:020617,50:0f172a,100:020617&height=2&section=header" width="100%"/></div>
+
 # 🔌 Frontend ↔ Backend Communication
 
 The frontend communicates with the backend using **Axios**.
@@ -765,6 +817,8 @@ This separation allows frontend and backend components to evolve independently.
 
 ---
 
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:020617,50:0f172a,100:020617&height=2&section=header" width="100%"/></div>
+
 # 🔒 Security
 
 Security is an important part of APS Minds.
@@ -785,6 +839,8 @@ The application uses **JWT authentication** for secure access to protected resou
 - 🔒 API key isolation
 
 ---
+
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:020617,50:0f172a,100:020617&height=2&section=header" width="100%"/></div>
 
 # 🔑 Environment Variables
 
@@ -832,6 +888,8 @@ Only commit:
 
 ---
 
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:020617,50:0f172a,100:020617&height=2&section=header" width="100%"/></div>
+
 # 📡 Mock APIs & Data Sources
 
 APS Minds can support both **real external APIs** and **mock/test data** during development.
@@ -847,6 +905,8 @@ Mock data can be used for:
 This allows the system to remain testable even when external services are unavailable.
 
 ---
+
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:020617,50:0f172a,100:020617&height=2&section=header" width="100%"/></div>
 
 # ⏱️ APScheduler
 
@@ -876,6 +936,8 @@ APScheduler
 ```
 
 ---
+
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:020617,50:0f172a,100:020617&height=2&section=header" width="100%"/></div>
 
 # 🛠️ Installation & Setup
 
@@ -970,6 +1032,8 @@ npm run dev
 
 ---
 
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:020617,50:0f172a,100:020617&height=2&section=header" width="100%"/></div>
+
 # 🔄 Complete Request Lifecycle
 
 A typical request follows this flow:
@@ -1013,6 +1077,8 @@ A typical request follows this flow:
 ```
 
 ---
+
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:020617,50:0f172a,100:020617&height=2&section=header" width="100%"/></div>
 
 # 💡 Example Multi-Agent Request
 
@@ -1077,6 +1143,8 @@ Task Understanding
 
 ---
 
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:020617,50:0f172a,100:020617&height=2&section=header" width="100%"/></div>
+
 # 📊 Why Multi-Agent Architecture?
 
 A traditional chatbot:
@@ -1127,6 +1195,8 @@ APS Minds:
 
 ---
 
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:020617,50:0f172a,100:020617&height=2&section=header" width="100%"/></div>
+
 # 🧰 Tech Stack
 
 ## Frontend
@@ -1175,6 +1245,8 @@ APS Minds:
 - Modular backend architecture
 
 ---
+
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:020617,50:0f172a,100:020617&height=2&section=header" width="100%"/></div>
 
 # 🗺️ Roadmap
 
@@ -1253,6 +1325,8 @@ APS Minds:
 
 ---
 
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:020617,50:0f172a,100:020617&height=2&section=header" width="100%"/></div>
+
 # 👥 Team
 
 <div align="center">
@@ -1271,6 +1345,8 @@ Development • Backend • Integration
 </div>
 
 ---
+
+<div align="center"><img src="https://capsule-render.vercel.app/api?type=rect&color=0:020617,50:0f172a,100:020617&height=2&section=header" width="100%"/></div>
 
 # 🏆 Vision
 
@@ -1317,5 +1393,17 @@ The long-term vision of **Arctes AI** is to become a scalable intelligence platf
 **Archi Sharma • Parth Goyal • Sonu Sharma**
 
 ### 2026
+
+</div>
+
+---
+
+<div align="center">
+
+<img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=600&size=18&duration=3000&pause=1000&color=38BDF8&center=true&vCenter=true&width=700&lines=THE+SYSTEM+IS+NOT+ONE+AI.;IT+IS+AN+INTELLIGENCE+NETWORK." alt="Animated closing statement"/>
+
+<br/><br/>
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:7c3aed,50:0ea5e9,100:020617&height=140&section=footer&animation=fadeIn" width="100%"/>
 
 </div>
