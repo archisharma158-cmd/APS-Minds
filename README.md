@@ -1331,65 +1331,100 @@ APS Minds:
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:020617,50:0f172a,100:020617&height=70&text=APS%20MINDS%20%2F%2F%20ARCTES%20AI&fontSize=24&fontColor=38BDF8&fontAlignY=55&animation=fadeIn" width="90%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:020617,35:0ea5e9,65:7c3aed,100:020617&height=145&section=header&text=THE%20MINDS%20BEHIND%20ARCTES&fontSize=27&fontColor=ffffff&fontAlignY=57&animation=fadeIn" width="100%"/>
+
+<br/>
+
+<img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=700&size=15&duration=2400&pause=650&color=38BDF8&center=true&vCenter=true&width=760&lines=RESEARCH.+ENGINEERING.+INTELLIGENCE.;THREE+SPECIALISTS+%E2%80%A2+ONE+INTELLIGENCE+NETWORK." alt="Animated team title"/>
 
 <br/><br/>
 
 <table>
 <tr>
+
 <td align="center" width="33%">
 
-<img src="https://capsule-render.vercel.app/api?type=rounded&color=0:0ea5e9,100:7c3aed&height=110&section=header&text=ARCHI%20SHARMA&fontSize=22&fontColor=ffffff&animation=fadeIn" width="100%"/>
+<img src="https://img.icons8.com/fluency/96/processor.png" width="62" alt="Architecture icon"/>
 
 <br/>
 
-**⚡ DEVELOPMENT**
+<img src="https://img.shields.io/badge/01-38BDF8?style=for-the-badge&labelColor=020617&color=0ea5e9"/>
 
-`BACKEND` • `INTEGRATION`
+<br/><br/>
 
-<img src="https://img.shields.io/badge/BACKEND-0f172a?style=for-the-badge&logo=fastapi&logoColor=38bdf8"/>
+### <font color="#38BDF8">ARCHI SHARMA</font>
+
+**Development**  
+**Backend**  
+**Integration**
+
 <br/>
-<img src="https://img.shields.io/badge/INTEGRATION-0f172a?style=for-the-badge&logo=api&logoColor=a78bfa"/>
+
+<img src="https://img.shields.io/badge/BACKEND-0ea5e9?style=flat-square&labelColor=020617"/>
+<img src="https://img.shields.io/badge/INTEGRATION-38bdf8?style=flat-square&labelColor=020617"/>
 
 </td>
 
 <td align="center" width="33%">
 
-<img src="https://capsule-render.vercel.app/api?type=rounded&color=0:2563eb,100:06b6d4&height=110&section=header&text=PARTH%20GOYAL&fontSize=22&fontColor=ffffff&animation=fadeIn" width="100%"/>
+<img src="https://img.icons8.com/fluency/96/code.png" width="62" alt="Code icon"/>
 
 <br/>
 
-**🎨 DEVELOPMENT**
+<img src="https://img.shields.io/badge/02-A78BFA?style=for-the-badge&labelColor=020617&color=7c3aed"/>
 
-`FRONTEND` • `SYSTEM DESIGN`
+<br/><br/>
 
-<img src="https://img.shields.io/badge/FRONTEND-0f172a?style=for-the-badge&logo=react&logoColor=38bdf8"/>
+### <font color="#A78BFA">PARTH GOYAL</font>
+
+**Development**  
+**Frontend**  
+**System Design**
+
 <br/>
-<img src="https://img.shields.io/badge/SYSTEM%20DESIGN-0f172a?style=for-the-badge&logo=blueprint&logoColor=22d3ee"/>
+
+<img src="https://img.shields.io/badge/FRONTEND-7c3aed?style=flat-square&labelColor=020617"/>
+<img src="https://img.shields.io/badge/SYSTEM%20DESIGN-a78bfa?style=flat-square&labelColor=020617"/>
 
 </td>
 
 <td align="center" width="33%">
 
-<img src="https://capsule-render.vercel.app/api?type=rounded&color=0:7c3aed,100:0ea5e9&height=110&section=header&text=SONU%20SHARMA&fontSize=22&fontColor=ffffff&animation=fadeIn" width="100%"/>
+<img src="https://img.icons8.com/fluency/96/artificial-intelligence.png" width="62" alt="AI icon"/>
 
 <br/>
 
-**🧠 AI/ML**
+<img src="https://img.shields.io/badge/03-22D3EE?style=for-the-badge&labelColor=020617&color=06b6d4"/>
 
-`ARCHITECTURE` • `AI INTEGRATION`
+<br/><br/>
 
-<img src="https://img.shields.io/badge/AI%2FML-0f172a?style=for-the-badge&logo=python&logoColor=38bdf8"/>
+### <font color="#22D3EE">SONU SHARMA</font>
+
+**AI/ML**  
+**Architecture**  
+**AI Integration**
+
 <br/>
-<img src="https://img.shields.io/badge/AI%20INTEGRATION-0f172a?style=for-the-badge&logo=openai&logoColor=a78bfa"/>
+
+<img src="https://img.shields.io/badge/AI%20%2B%20ML-06b6d4?style=flat-square&labelColor=020617"/>
+<img src="https://img.shields.io/badge/ARCHITECTURE-22d3ee?style=flat-square&labelColor=020617"/>
 
 </td>
+
 </tr>
 </table>
 
 <br/>
 
-<img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=600&size=16&duration=2800&pause=900&color=38BDF8&center=true&vCenter=true&width=850&lines=THREE+MINDS.;ONE+SYSTEM.;UNIFIED+INTELLIGENCE." alt="Team animated statement"/>
+<img src="https://capsule-render.vercel.app/api?type=rect&color=0:020617,20:0ea5e9,50:7c3aed,80:22d3ee,100:020617&height=5&section=header&animation=fadeIn" width="82%"/>
+
+<br/>
+
+<img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=600&size=14&duration=2200&pause=600&color=A78BFA&center=true&vCenter=true&width=650&lines=DESIGNED.;ENGINEERED.;INTEGRATED.;BUILT+BY+APS+MINDS." alt="Animated team roles"/>
+
+<br/><br/>
+
+<sub>◈ APS MINDS  /  ARCTES AI  /  2026 ◈</sub>
 
 </div>
 
