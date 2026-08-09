@@ -16,23 +16,31 @@ app = FastAPI(
 # CORS
 # ============================================================
 
-# Parse comma-separated origins from settings (env-driven).
-_cors_defaults = [
-    "http://localhost:5173",
-    "http://127.0.0.1:5173",
-]
-_cors_env = [
-    o.strip()
-    for o in settings.CORS_ORIGINS.split(",")
-    if o.strip()
-]
-
-cors_origins = [
+# Production frontend origins — always included regardless of environment.
+_PRODUCTION_ORIGINS = [
     "https://aps-minds.vercel.app",
     "https://aps-minds-pro-spy.vercel.app",
     "https://aps-minds-git-main-pro-spy.vercel.app",
-    "http://localhost:5173",
 ]
+
+# Local development origins — always preserved.
+_LOCAL_ORIGINS = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+]
+
+# Optional extra origins from the CORS_ORIGINS env var (comma-separated).
+# Robust to missing/empty/malformed values so a bad env var can never break CORS.
+_cors_env_extra = [
+    o.strip()
+    for o in (settings.CORS_ORIGINS or "").split(",")
+    if o.strip()
+]
+
+# Merge, deduplicate, and preserve insertion order.
+cors_origins = list(
+    dict.fromkeys(_PRODUCTION_ORIGINS + _LOCAL_ORIGINS + _cors_env_extra)
+)
 
 app.add_middleware(
     CORSMiddleware,
