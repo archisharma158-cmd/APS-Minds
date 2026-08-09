@@ -26,7 +26,13 @@ _cors_env = [
     for o in settings.CORS_ORIGINS.split(",")
     if o.strip()
 ]
-cors_origins = _cors_env or _cors_defaults
+
+cors_origins = [
+    "https://aps-minds.vercel.app",
+    "https://aps-minds-pro-spy.vercel.app",
+    "https://aps-minds-git-main-pro-spy.vercel.app",
+    "http://localhost:5173",
+]
 
 app.add_middleware(
     CORSMiddleware,
