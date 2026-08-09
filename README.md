@@ -1334,13 +1334,13 @@ APS Minds:
 ### APS MINDS — ARCTES AI
 
 **Archi Sharma**
-AI/ML • Architecture • AI Integration
+Development • Backend • Integration
 
 **Parth Goyal**
 Development • Frontend • System Design
 
 **Sonu Sharma**
-Development • Backend • Integration
+AI/ML • Architecture • AI Integration
 
 </div>
 
