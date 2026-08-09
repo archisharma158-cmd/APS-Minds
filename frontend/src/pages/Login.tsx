@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useAuth } from "../context/AuthContext";
 import type { ApiError } from "../types";
 import { AxiosError } from "axios";
-import logo from "../assets/apsminds-logo.jpg";
+import logo from "../assets/apsminds-logo.png";
 
 export default function Login() {
   const { login } = useAuth();
@@ -84,7 +84,10 @@ export default function Login() {
           {/* Form */}
           <form onSubmit={handleSubmit} className="space-y-5">
             <div>
-              <label htmlFor="login-email" className="block text-sm font-medium text-white/60 mb-1.5">
+              <label
+                htmlFor="login-email"
+                className="block text-sm font-medium text-white/60 mb-1.5"
+              >
                 Email
               </label>
               <input
@@ -99,7 +102,10 @@ export default function Login() {
             </div>
 
             <div>
-              <label htmlFor="login-password" className="block text-sm font-medium text-white/60 mb-1.5">
+              <label
+                htmlFor="login-password"
+                className="block text-sm font-medium text-white/60 mb-1.5"
+              >
                 Password
               </label>
               <input
@@ -132,7 +138,10 @@ export default function Login() {
           {/* Footer */}
           <p className="text-center text-sm text-white/30 mt-6">
             Don't have an account?{" "}
-            <Link to="/signup" className="text-brand-400 hover:text-brand-300 transition-colors">
+            <Link
+              to="/signup"
+              className="text-brand-400 hover:text-brand-300 transition-colors"
+            >
               Create one
             </Link>
           </p>

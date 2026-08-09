@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useAuth } from "../context/AuthContext";
 import type { ApiError } from "../types";
 import { AxiosError } from "axios";
-import logo from "../assets/apsminds-logo.jpg";
+import logo from "../assets/apsminds-logo.png";
 
 export default function Signup() {
   const { signup } = useAuth();
@@ -72,8 +72,12 @@ export default function Signup() {
             <p className="mt-1 font-mono text-[9px] tracking-[0.28em] text-white/30">
               AUTONOMOUS INTELLIGENCE
             </p>
-            <h2 className="mt-5 text-xl font-bold text-white">Create your account</h2>
-            <p className="text-white/40 text-sm mt-1">Join the autonomous publishing revolution</p>
+            <h2 className="mt-5 text-xl font-bold text-white">
+              Create your account
+            </h2>
+            <p className="text-white/40 text-sm mt-1">
+              Join the autonomous publishing revolution
+            </p>
           </div>
 
           {/* Error */}
@@ -90,7 +94,10 @@ export default function Signup() {
           {/* Form */}
           <form onSubmit={handleSubmit} className="space-y-5">
             <div>
-              <label htmlFor="signup-name" className="block text-sm font-medium text-white/60 mb-1.5">
+              <label
+                htmlFor="signup-name"
+                className="block text-sm font-medium text-white/60 mb-1.5"
+              >
                 Full Name
               </label>
               <input
@@ -106,7 +113,10 @@ export default function Signup() {
             </div>
 
             <div>
-              <label htmlFor="signup-email" className="block text-sm font-medium text-white/60 mb-1.5">
+              <label
+                htmlFor="signup-email"
+                className="block text-sm font-medium text-white/60 mb-1.5"
+              >
                 Email
               </label>
               <input
@@ -121,7 +131,10 @@ export default function Signup() {
             </div>
 
             <div>
-              <label htmlFor="signup-password" className="block text-sm font-medium text-white/60 mb-1.5">
+              <label
+                htmlFor="signup-password"
+                className="block text-sm font-medium text-white/60 mb-1.5"
+              >
                 Password
               </label>
               <input
@@ -155,7 +168,10 @@ export default function Signup() {
           {/* Footer */}
           <p className="text-center text-sm text-white/30 mt-6">
             Already have an account?{" "}
-            <Link to="/login" className="text-brand-400 hover:text-brand-300 transition-colors">
+            <Link
+              to="/login"
+              className="text-brand-400 hover:text-brand-300 transition-colors"
+            >
               Sign in
             </Link>
           </p>

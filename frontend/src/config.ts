@@ -7,7 +7,12 @@
 // ============================================================
 
 // Backend ARCTES chat endpoint (no API key — keys stay backend-only).
-export const AGENT_CHAT_URL = "http://127.0.0.1:8000/api/agent/chat";
+// Local dev default targets the backend on port 8001; override via VITE_API_URL
+// (or VITE_ARCTES_API_URL) in production.
+export const AGENT_CHAT_URL =
+  import.meta.env.VITE_ARCTES_API_URL ||
+  import.meta.env.VITE_API_URL ||
+  "http://127.0.0.1:8001/api/agent/chat";
 
 export const BRAND = {
   name: "APS MINDS",
@@ -56,4 +61,3 @@ export const teamMembers: TeamMember[] = [
     github: "",
   },
 ];
-

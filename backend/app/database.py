@@ -3,9 +3,16 @@ from sqlalchemy.orm import sessionmaker, DeclarativeBase
 
 from app.config import settings
 
+if not settings.DATABASE_URL:
+    raise RuntimeError(
+        "DATABASE_URL is not set. Add it to backend/.env (e.g. your Supabase "
+        "Postgres connection string) before starting the application."
+    )
+
+# PostgreSQL/Supabase engine — no SQLite-specific connect_args.
 engine = create_engine(
     settings.DATABASE_URL,
-    connect_args={"check_same_thread": False},  # SQLite-specific
+    pool_pre_ping=True,
 )
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)

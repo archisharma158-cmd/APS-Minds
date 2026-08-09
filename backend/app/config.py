@@ -14,10 +14,16 @@ DEFAULT_RSS_FEEDS = ",".join([
 
 class Settings(BaseSettings):
     # Auth
+    # SECRET_KEY / DATABASE_URL come from backend/.env (never hardcode secrets).
     SECRET_KEY: str = "dev-secret-key-change-me"
     ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 1440
-    DATABASE_URL: str = f"sqlite:///{BASE_DIR / 'aps_minds.db'}"
+    # DATABASE_URL is read from the environment (e.g. Supabase PostgreSQL URI).
+    # There is intentionally no SQLite default here.
+    DATABASE_URL: str = ""
+
+    # CORS — comma-separated list of allowed origins.
+    CORS_ORIGINS: str = "http://localhost:5173,http://127.0.0.1:5173"
 
     # ARCTES — Scout sources
     TAVILY_API_KEY: str = ""

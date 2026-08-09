@@ -5,14 +5,16 @@ import {
   BrainCircuit,
   ChevronDown,
   Globe,
+  LogOut,
   Menu,
   Radio,
   Sparkles,
   X,
 } from "lucide-react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
-import logo from "../assets/apsminds-logo.jpg";
+import { useAuth } from "../context/AuthContext";
+import logo from "../assets/apsminds-logo.png";
 
 const navItems = [
   { label: "Home", to: "/" },
@@ -51,8 +53,10 @@ const productItems = [
 
 export default function Navbar() {
   const location = useLocation();
+  const navigate = useNavigate();
+  const { isAuthenticated, logout } = useAuth();
 
-const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [productOpen, setProductOpen] = useState(false);
   const [mobileProductOpen, setMobileProductOpen] = useState(false);
@@ -73,7 +77,7 @@ const [scrolled, setScrolled] = useState(false);
     };
   }, []);
 
-useEffect(() => {
+  useEffect(() => {
     setMobileOpen(false);
     setProductOpen(false);
     setMobileProductOpen(false);
@@ -146,6 +150,12 @@ useEffect(() => {
     return location.pathname.startsWith(to);
   };
 
+  const handleLogout = async () => {
+    closeAll();
+    await logout();
+    navigate("/login", { replace: true });
+  };
+
   return (
     <>
       {/* ================= NAVBAR ================= */}
@@ -163,9 +173,12 @@ useEffect(() => {
         }`}
       >
         <div className="mx-auto flex h-[78px] max-w-7xl items-center justify-between px-5 lg:px-8">
-
           {/* ================= LOGO ================= */}
-          <Link to="/" onClick={handleHomeClick} className="group relative flex items-center gap-3">
+          <Link
+            to="/"
+            onClick={handleHomeClick}
+            className="group relative flex items-center gap-3"
+          >
             <div className="relative h-11 w-11 overflow-hidden rounded-xl border border-cyan-300/20 bg-black shadow-[0_0_30px_rgba(0,170,255,.12)]">
               <img
                 src={logo}
@@ -188,7 +201,6 @@ useEffect(() => {
 
           {/* ================= DESKTOP NAV ================= */}
           <nav className="hidden items-center gap-1 lg:flex">
-
             {/* HOME */}
             <Link
               to="/"
@@ -222,7 +234,6 @@ useEffect(() => {
                 className="group flex items-center gap-1.5 rounded-xl px-4 py-2.5 font-mono text-[10px] tracking-[0.16em] text-white/45 transition-all duration-300 hover:bg-white/[0.04] hover:text-white"
               >
                 PRODUCT
-
                 <ChevronDown
                   size={13}
                   className={`transition-transform duration-300 ${
@@ -314,30 +325,60 @@ useEffect(() => {
 
           {/* ================= RIGHT ACTIONS ================= */}
           <div className="hidden items-center gap-2 lg:flex">
+            {isAuthenticated ? (
+              <>
+                <Link
+                  to="/agent/chat"
+                  className="group relative flex items-center gap-2 overflow-hidden rounded-xl border border-cyan-200/30 bg-cyan-300 px-5 py-3 font-mono text-[9px] font-black tracking-[0.16em] text-black shadow-[0_0_30px_rgba(34,211,238,.12)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_45px_rgba(34,211,238,.3)]"
+                >
+                  <span className="absolute inset-0 -translate-x-full bg-white/50 transition-transform duration-500 group-hover:translate-x-full" />
+                  <Sparkles size={13} />
+                  <span className="relative">INITIALIZE ARCTES</span>
+                  <ArrowRight
+                    size={13}
+                    className="relative transition-transform duration-300 group-hover:translate-x-1"
+                  />
+                </Link>
 
-            <Link
-              to="/login"
-              className="rounded-xl px-4 py-2.5 font-mono text-[10px] tracking-[0.14em] text-white/45 transition-all duration-300 hover:bg-white/[0.04] hover:text-white"
-            >
-              LOGIN
-            </Link>
+                <button
+                  type="button"
+                  onClick={handleLogout}
+                  className="group relative flex items-center gap-2 overflow-hidden rounded-xl border border-white/10 px-4 py-2.5 font-mono text-[10px] tracking-[0.14em] text-white/60 transition-all duration-300 hover:border-red-400/30 hover:bg-red-500/10 hover:text-red-300"
+                >
+                  <LogOut
+                    size={13}
+                    className="transition-transform duration-300 group-hover:-translate-x-0.5 group-hover:translate-y-0.5"
+                  />
+                  LOGOUT
+                </button>
+              </>
+            ) : (
+              <>
+                <Link
+                  to="/login"
+                  className="rounded-xl px-4 py-2.5 font-mono text-[10px] tracking-[0.14em] text-white/45 transition-all duration-300 hover:bg-white/[0.04] hover:text-white"
+                >
+                  LOGIN
+                </Link>
 
-            <Link
-              to="/agent/chat"
-              className="group relative flex items-center gap-2 overflow-hidden rounded-xl border border-cyan-200/30 bg-cyan-300 px-5 py-3 font-mono text-[9px] font-black tracking-[0.16em] text-black shadow-[0_0_30px_rgba(34,211,238,.12)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_45px_rgba(34,211,238,.3)]"
-            >
-              <span className="absolute inset-0 -translate-x-full bg-white/50 transition-transform duration-500 group-hover:translate-x-full" />
-              <Sparkles size={13} />
-              <span className="relative">INITIALIZE ARCTES</span>
-              <ArrowRight
-                size={13}
-                className="relative transition-transform duration-300 group-hover:translate-x-1"
-              />
-            </Link>
+                <Link
+                  to="/agent/chat"
+                  className="group relative flex items-center gap-2 overflow-hidden rounded-xl border border-cyan-200/30 bg-cyan-300 px-5 py-3 font-mono text-[9px] font-black tracking-[0.16em] text-black shadow-[0_0_30px_rgba(34,211,238,.12)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_0_45px_rgba(34,211,238,.3)]"
+                >
+                  <span className="absolute inset-0 -translate-x-full bg-white/50 transition-transform duration-500 group-hover:translate-x-full" />
+                  <Sparkles size={13} />
+                  <span className="relative">INITIALIZE ARCTES</span>
+                  <ArrowRight
+                    size={13}
+                    className="relative transition-transform duration-300 group-hover:translate-x-1"
+                  />
+                </Link>
+              </>
+            )}
           </div>
 
           {/* ================= MOBILE BUTTON ================= */}
-<button
+          <button
             type="button"
             onClick={() => setMobileOpen((v) => !v)}
             className="touch-target flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] text-white/70 transition hover:border-cyan-300/20 hover:text-cyan-300 lg:hidden"
@@ -389,9 +430,17 @@ useEffect(() => {
             >
               {/* MOBILE HEADER */}
               <div className="flex items-center justify-between">
-                <Link to="/" onClick={handleHomeClick} className="flex items-center gap-3">
+                <Link
+                  to="/"
+                  onClick={handleHomeClick}
+                  className="flex items-center gap-3"
+                >
                   <div className="h-10 w-10 overflow-hidden rounded-xl border border-cyan-300/20">
-                    <img src={logo} alt="APS Minds" className="h-full w-full object-cover" />
+                    <img
+                      src={logo}
+                      alt="APS Minds"
+                      className="h-full w-full object-cover"
+                    />
                   </div>
                   <div>
                     <div className="text-sm font-black text-white">
@@ -403,7 +452,7 @@ useEffect(() => {
                   </div>
                 </Link>
 
-<button
+                <button
                   type="button"
                   onClick={() => setMobileOpen(false)}
                   aria-label="Close menu"
@@ -419,7 +468,7 @@ useEffect(() => {
                 ARCTES ENGINE ONLINE
               </div>
 
-{/* PRODUCT — tap-based accordion */}
+              {/* PRODUCT — tap-based accordion */}
               <div className="mt-6">
                 <button
                   type="button"
@@ -482,7 +531,7 @@ useEffect(() => {
                   NAVIGATION
                 </div>
 
-<div className="space-y-2">
+                <div className="space-y-2">
                   {navItems.map((item) => (
                     <Link
                       key={item.label}
@@ -502,13 +551,24 @@ useEffect(() => {
 
               {/* ACTIONS */}
               <div className="mt-7 border-t border-white/[0.06] pt-7">
-                <Link
-                  to="/login"
-                  onClick={closeAll}
-                  className="mb-3 block rounded-xl border border-white/10 px-5 py-4 text-center font-mono text-[10px] tracking-[0.15em] text-white/60 transition hover:bg-white/[0.03] hover:text-white"
-                >
-                  LOGIN
-                </Link>
+                {isAuthenticated ? (
+                  <button
+                    type="button"
+                    onClick={handleLogout}
+                    className="mb-3 flex w-full items-center justify-center gap-2 rounded-xl border border-red-400/20 bg-red-500/[0.06] px-5 py-4 font-mono text-[10px] tracking-[0.15em] text-red-300/80 transition hover:border-red-400/40 hover:bg-red-500/10 hover:text-red-300"
+                  >
+                    <LogOut size={15} />
+                    LOGOUT
+                  </button>
+                ) : (
+                  <Link
+                    to="/login"
+                    onClick={closeAll}
+                    className="mb-3 block rounded-xl border border-white/10 px-5 py-4 text-center font-mono text-[10px] tracking-[0.15em] text-white/60 transition hover:bg-white/[0.03] hover:text-white"
+                  >
+                    LOGIN
+                  </Link>
+                )}
 
                 <Link
                   to="/agent/chat"

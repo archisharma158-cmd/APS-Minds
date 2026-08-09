@@ -1,6 +1,6 @@
 import { Mail } from "lucide-react";
 import { Link } from "react-router-dom";
-import logo from "../assets/apsminds-logo.jpg";
+import logo from "../assets/apsminds-logo.png";
 import { BRAND, teamMembers } from "../config";
 
 export default function Footer() {
@@ -76,10 +76,7 @@ export default function Footer() {
 
             <div className="mt-4 grid gap-2">
               {teamMembers.map((member) => (
-                <span
-                  key={member.name}
-                  className="text-sm text-white/45"
-                >
+                <span key={member.name} className="text-sm text-white/45">
                   {member.name}
                 </span>
               ))}
@@ -94,7 +91,7 @@ export default function Footer() {
             </p>
           </div>
 
-{/* Team Contact */}
+          {/* Team Contact */}
           <div>
             <div className="font-mono text-[9px] tracking-[0.25em] text-cyan-400/60">
               {BRAND.aiSystem}

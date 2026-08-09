@@ -1,14 +1,32 @@
+import sys
 from logging.config import fileConfig
+from pathlib import Path
 
 from sqlalchemy import engine_from_config, pool
 from alembic import context
 
+# Ensure the backend package (app/) is importable regardless of the CWD
+# from which Alembic is invoked.
+BASE_PATH = Path(__file__).resolve().parent.parent
+if str(BASE_PATH) not in sys.path:
+    sys.path.insert(0, str(BASE_PATH))
+
+from app.config import settings
 from app.database import Base
 from app.models import User  # noqa: F401 — ensure models are registered
 
 config = context.config
 if config.config_file_name is not None:
     fileConfig(config.config_file_name)
+
+# Use the same DATABASE_URL as the application (Supabase PostgreSQL).
+# Never fall back to SQLite.
+if not settings.DATABASE_URL:
+    raise RuntimeError(
+        "DATABASE_URL is not set. Add it to backend/.env (e.g. your Supabase "
+        "Postgres connection string) before running Alembic migrations."
+    )
+config.set_main_option("sqlalchemy.url", settings.DATABASE_URL)
 
 target_metadata = Base.metadata
 

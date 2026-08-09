@@ -3,6 +3,7 @@ from datetime import datetime, timedelta, timezone
 from jose import JWTError, jwt
 from passlib.context import CryptContext
 from sqlalchemy.orm import Session
+from sqlalchemy.exc import SQLAlchemyError
 from fastapi import HTTPException, status
 
 from app.config import settings
@@ -54,21 +55,31 @@ class AuthService:
     @staticmethod
     def signup(db: Session, data: SignupRequest) -> tuple[User, str]:
         """Creates a new user and returns (user, token)."""
-        existing = db.query(User).filter(User.email == data.email).first()
-        if existing:
-            raise HTTPException(
-                status_code=status.HTTP_409_CONFLICT,
-                detail="Email already registered",
-            )
+        try:
+            existing = db.query(User).filter(User.email == data.email).first()
+            if existing:
+                raise HTTPException(
+                    status_code=status.HTTP_409_CONFLICT,
+                    detail="Email already registered",
+                )
 
-        user = User(
-            name=data.name,
-            email=data.email,
-            password_hash=AuthService.hash_password(data.password),
-        )
-        db.add(user)
-        db.commit()
-        db.refresh(user)
+            user = User(
+                name=data.name,
+                email=data.email,
+                password_hash=AuthService.hash_password(data.password),
+            )
+            db.add(user)
+            db.commit()
+            db.refresh(user)
+        except HTTPException:
+            db.rollback()
+            raise
+        except SQLAlchemyError:
+            db.rollback()
+            raise HTTPException(
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail="Could not create your account due to a server error. Please try again.",
+            )
 
         token = AuthService.create_access_token(user.id)
         return user, token
@@ -76,11 +87,18 @@ class AuthService:
     @staticmethod
     def login(db: Session, email: str, password: str) -> tuple[User, str]:
         """Validates credentials and returns (user, token)."""
-        user = db.query(User).filter(User.email == email).first()
-        if not user or not AuthService.verify_password(password, user.password_hash):
+        try:
+            user = db.query(User).filter(User.email == email).first()
+            if not user or not AuthService.verify_password(password, user.password_hash):
+                raise HTTPException(
+                    status_code=status.HTTP_401_UNAUTHORIZED,
+                    detail="Invalid email or password",
+                )
+        except SQLAlchemyError:
+            db.rollback()
             raise HTTPException(
-                status_code=status.HTTP_401_UNAUTHORIZED,
-                detail="Invalid email or password",
+                status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+                detail="An unexpected server error occurred. Please try again.",
             )
 
         token = AuthService.create_access_token(user.id)
